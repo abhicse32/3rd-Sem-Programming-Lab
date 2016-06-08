@@ -1,0 +1,61 @@
+<body>
+  <blockquote>
+  <p><b>Note: All code should be written within <a href="">this template directory</a></b>. Test cases have been provided in the folder <code>tests</code>, and can be run using <code>make test</code>. </p> 
+  </blockquote>
+
+<br>
+In this assignment, we will implement a data structure to represent a polynomial (in one variable) of the form, a<sub>0</sub> x<sup>0</sup> + a<sub>1</sub> x<sup>1</sup> + a<sub>2</sub> x<sup>2</sup> + ..., and some basic operations on them.
+
+<h2>Polynomial Library</h2>
+Create a library to support the following operations with polynomials. 
+(For simplicity, you may assume that the degree of polynomials will be 
+at most 10):
+<ol>
+    <li><code>polynomial polynomial_construct( int n, double[] coeffs )</code>: Construct a polynomial from a list of 'n' coefficients stored in 'coeffs'. </li>
+    <li><code>void polynomial_print( polynomial q )</code>: Print the polynomial q in the format "<code>a0 x^0 + a1 x^1 + ...</code>", where <code>a0</code>, etc. are the actual coefficients, to the terminal (using printf) </li>
+    <li><code>double polynomial_evaluate( polynomial p, double x )</code>: Evaluate the polynomial p at the value x.</li>
+    <li><code>polynomial polynomial_add( polynomial p, polynomial q )</code>: Add two polynomials p, q.</li>
+    <li><code>polynomial polynomial_sub( polynomial p, polynomial q )</code>: Subtract two polynomials p, q.</li>
+    <li><code>polynomial polynomial_mul( polynomial p, polynomial q )</code>: Multiply two polynomials p, q.</li>
+    <li><code>polynomial polynomial_diff( polynomial p )</code>: Differentiate the polynomial p with respect to x.</li>
+    <li><code>polynomial polynomial_integrate( polynomial p )</code>: Integrate the polynomial p with respect to x. Ignore the constant term.</li>
+</ol>
+
+<i>Extra credit: Use malloc and suitably modify the functions above so that one can define arbitrary length polynomials</i>
+
+<h2>Newton's Laws</h2>
+
+<a href="http://en.wikipedia.org/wiki/Newton%27s_laws_of_motion">Newton's laws of motion</a> ...
+
+In this exercise, we will use the polynomial library you just wrote
+ to compute the dynamics of some simple bodies. 
+
+<ol>
+ <li>
+    A car is moving on a race track, in a straight line, starting at a 'v' m/s,
+    accelerating at 'a' m/s<sup>2</sup>. Find how far it will travel in 't'
+    seconds. The user will input 'v', 'a' and 't', as double values in that
+    order.
+   <br />
+   <b>Input:</b><code>2 3 4</code> <br />
+   <b>Output:</b><code>32.000000</code> <br />
+
+ </li>
+ <li>
+    Let us assume that you are driving a car with a failing engine; the torque
+    it can provide peaks at a point, and then after some time dies. For
+    simplicity sake, let us consider that the car accelerates with an
+    acceleration equal to 'b * t * (T-t)' (friction, etc. considered), where T
+    is the duration after which the engine will die, and 'b' is some constant.
+    Once the car stops, assume a constant deceleration due to friction of 'f'
+    m/s<sup>2</sup>.  How far will you be able to travel?  The user will give
+    input as 'b', 'T', and 'f' as double values in that order.
+
+   <br />
+   <b>Input:</b><code>4 5 2</code> <br />
+   <b>Output:</b><code>1944.444444</code> <br />
+ </li>
+</ol>
+
+
+</body>
